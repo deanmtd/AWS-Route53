@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Route 53 Domain Management Portfolio</title>
+    <style>
+        :root {
+            --aws-orange: #FF9900;
+            --aws-dark: #232F3E;
+            --aws-light: #FAFAFA;
+            --aws-border: #E6E6E6;
+            --aws-text: #16191F;
+            --aws-link: #0073BB;
+            --aws-link-hover: #FF9900;
+        }
+        
+        body {
+            font-family: 'Amazon Ember', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: var(--aws-text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--aws-light);
+        }
+        
+        header {
+            background-color: var(--aws-dark);
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            margin: 0;
+            color: var(--aws-orange);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        
+        h2, h3, h4 {
+            color: var(--aws-dark);
+        }
+        
+        h2 {
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--aws-orange);
+        }
+        
+        a {
+            color: var(--aws-link);
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: var(--aws-link-hover);
+            text-decoration: underline;
+        }
+        
+        .section {
+            margin-bottom: 2rem;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+        }
+        
+        code {
+            font-family: 'Monaco', 'Menlo', 'Consolas', monospace;
+            background-color: #F5F5F5;
+            padding: 2px 4px;
+            border-radius: 3px;
+            border: 1px solid var(--aws-border);
+        }
+        
+        pre {
+            background-color: #F5F5F5;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            border: 1px solid var(--aws-border);
+        }
+        
+        .aws-button {
+            background-color: var(--aws-orange);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 3px;
+            cursor: pointer;
+            display: inline-block;
+            font-weight: bold;
+        }
+        
+        .aws-button:hover {
+            background-color: #EC7211;
+            text-decoration: none;
+        }
+        
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .skill-badge {
+            background-color: var(--aws-dark);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+        }
+        
+        .image-container {
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            border: 1px solid var(--aws-border);
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        
+        table, th, td {
+            border: 1px solid var(--aws-border);
+        }
+        
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #F0F0F0;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #FAFAFA;
+        }
+        
+        footer {
+            background-color: var(--aws-dark);
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+        
+        .comparison-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 1.5rem 0;
+        }
+        
+        .comparison-column {
+            flex: 1;
+            min-width: 300px;
+            background-color: #F5F5F5;
+            padding: 1rem;
+            border-radius: 5px;
+            border-left: 5px solid var(--aws-orange);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>AWS Route 53 Domain Management Project</h1>
+            <p>Demonstrating DNS configuration and routing strategies in a multi-region architecture</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="section">
+            <h2>Project Overview</h2>
+            <p>This portfolio project demonstrates my proficiency with AWS Route 53 for DNS management and routing strategies. I've implemented a multi-region architecture using EC2 instances across different AWS regions with various DNS routing configurations, showcasing both record types and routing policies.</p>
+            
+            <div class="image-container">
+                <img src="Images/architecture_diagram.png" alt="Project Architecture Diagram" width="800">
+                <p><em>Architecture Diagram: Multi-region EC2 deployment with Route 53</em></p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Skills Demonstrated</h2>
+            <div class="skills-list">
+                <span class="skill-badge">Domain Registration</span>
+                <span class="skill-badge">DNS Management</span>
+                <span class="skill-badge">A Records</span>
+                <span class="skill-badge">CNAME Records</span>
+                <span class="skill-badge">Alias Records</span>
+                <span class="skill-badge">DNS TTL Configuration</span>
+                <span class="skill-badge">Multi-region EC2</span>
+                <span class="skill-badge">Load Balancer Configuration</span>
+                <span class="skill-badge">Route 53 Routing Policies</span>
+                <span class="skill-badge">DNS Troubleshooting</span>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Project Architecture</h2>
+            <p>The project consists of:</p>
+            <ul>
+                <li>3 EC2 instances deployed across different AWS regions:
+                    <ul>
+                        <li>EU-Central-1 (Frankfurt)</li>
+                        <li>US-East-1 (Northern Virginia)</li>
+                        <li>AP-Southeast-1 (Singapore)</li>
+                    </ul>
+                </li>
+                <li>1 Application Load Balancer in EU-Central-1</li>
+                <li>Route 53 DNS configurations including various record types and routing policies</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Implementation Steps</h2>
+            
+            <h3>1. Domain Registration</h3>
+            <p>I registered a domain through AWS Route 53 following these steps:</p>
+            <ol>
+                <li>Accessed the Route 53 console and selected "Register domains"</li>
+                <li>Entered my desired domain name and verified its availability</li>
+                <li>Configured domain settings including registration duration and auto-renewal options</li>
+                <li>Added privacy protection to hide personal information from WHOIS lookups</li>
+                <li>Completed the registration process</li>
+            </ol>
+            <p>After registration, Route 53 automatically created a hosted zone with NS (Name Server) and SOA (Start of Authority) records, establishing Route 53 as the authoritative DNS for my domain.</p>
+            
+            <div class="image-container">
+                <img src="Images/domain_registration.png" alt="AWS Domain Registration Process" width="600">
+                <p><em>Domain registration process in AWS Route 53</em></p>
+            </div>
+            
+            <h3>2. Multi-Region EC2 Deployment</h3>
+            <p>I deployed EC2 instances across three AWS regions to demonstrate global distribution capabilities:</p>
+            
+            <h4>Instance Configuration:</h4>
+            <ul>
+                <li>Amazon Linux 2 AMI</li>
+                <li>t2.micro instance type</li>
+                <li>Security groups allowing SSH and HTTP access</li>
+                <li>User data script to display instance information:</li>
+            </ul>
+            
+            <pre><code>#!/bin/bash
+yum update -y
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
+EC2_AVAIL_ZONE=$(curl -s http://169.254.169.254/latest/meta-data/placement/availability-zone)
+echo "&lt;h1&gt;Hello World from $(hostname -f) in AZ $EC2_AVAIL_ZONE&lt;/h1&gt;" > /var/www/html/index.html</code></pre>
+            
+            <p>This script creates a simple web page that displays the hostname and availability zone, making it easy to verify which instance is serving the request.</p>
+            
+            <div class="image-container">
+                <img src="Images/ec2_deployment.png" alt="Multi-region EC2 Deployment" width="600">
+                <p><em>EC2 instances deployed across multiple AWS regions</em></p>
+            </div>
+            
+            <h3>3. Application Load Balancer Setup</h3>
+            <p>I configured an Application Load Balancer in EU-Central-1:</p>
+            <ol>
+                <li>Created a new ALB named "DemoRoute53ALB"</li>
+                <li>Configured it as internet-facing</li>
+                <li>Selected multiple subnets for high availability</li>
+                <li>Used a security group allowing HTTP traffic</li>
+                <li>Created a target group "demo-tg-route-53" with the EU-Central-1 instance</li>
+                <li>Verified functionality by accessing the ALB's DNS name</li>
+            </ol>
+            
+            <div class="image-container">
+                <img src="Images/alb_setup.png" alt="Application Load Balancer Configuration" width="600">
+                <p><em>Application Load Balancer configuration in EU-Central-1</em></p>
+            </div>
+            
+            <h3>4. Route 53 Record Configuration</h3>
+            <p>I implemented various DNS record types to demonstrate different capabilities:</p>
+            
+            <h4>Simple A Record</h4>
+            <p>Created a test record that maps a subdomain to a specific IP address:</p>
+            <ul>
+                <li>Name: test.example.com</li>
+                <li>Type: A Record</li>
+                <li>Value: 11.22.33.44</li>
+                <li>TTL: 300 seconds</li>
+            </ul>
+            
+            <h4>CNAME Record</h4>
+            <p>Created a CNAME record to point a subdomain to the Application Load Balancer:</p>
+            <ul>
+                <li>Name: myapp.example.com</li>
+                <li>Type: CNAME</li>
+                <li>Value: [ALB DNS Name]</li>
+                <li>TTL: 300 seconds</li>
+            </ul>
+            
+            <h4>Alias Record for Subdomain</h4>
+            <p>Created an Alias record as an alternative approach to redirect traffic to the ALB:</p>
+            <ul>
+                <li>Name: myalias.example.com</li>
+                <li>Type: A (Alias)</li>
+                <li>Target: [ALB in eu-central-1]</li>
+                <li>Evaluate Target Health: Yes</li>
+            </ul>
+            
+            <h4>Alias Record for Zone Apex (Root Domain)</h4>
+            <p>Created an Alias record for the root domain pointing to the ALB:</p>
+            <ul>
+                <li>Name: example.com (empty name field)</li>
+                <li>Type: A (Alias)</li>
+                <li>Target: [ALB in eu-central-1]</li>
+                <li>Evaluate Target Health: Yes</li>
+            </ul>
+            
+            <div class="image-container">
+                <img src="Images/route53_records.png" alt="Route 53 Record Configuration" width="600">
+                <p><em>Various record configurations in Route 53 hosted zone</em></p>
+            </div>
+            
+            <h3>5. TTL Experimentation</h3>
+            <p>To demonstrate TTL behavior, I performed the following experiment:</p>
+            <ol>
+                <li>Created a record with a 120-second TTL pointing to the EU-Central-1 instance</li>
+                <li>Verified the record worked by accessing it through a browser and command line</li>
+                <li>Changed the record to point to a different region (AP-Southeast-1)</li>
+                <li>Observed that the old value remained cached until the TTL expired</li>
+                <li>Verified that after TTL expiration, new DNS queries returned the updated value</li>
+            </ol>
+            
+            <div class="image-container">
+                <img src="Images/ttl_experiment.png" alt="TTL Experiment Results" width="600">
+                <p><em>DNS response before and after TTL expiration</em></p>
+            </div>
+            
+            <h3>6. Simple Routing Policy Implementation</h3>
+            <p>I implemented a simple routing policy with multiple values:</p>
+            <ol>
+                <li>Created a record "simple.example.com" initially pointing to the AP-Southeast-1 instance</li>
+                <li>Set a low TTL of 20 seconds for quick testing</li>
+                <li>Modified the record to include two IP addresses (AP-Southeast-1 and US-East-1)</li>
+                <li>Verified using dig command that both IPs were returned in the answer section</li>
+                <li>Demonstrated that client-side random selection occurs by refreshing the browser multiple times</li>
+            </ol>
+            
+            <div class="image-container">
+                <img src="Images/simple_routing.png" alt="Simple Routing Policy Implementation" width="600">
+                <p><em>Simple routing policy configuration and testing results</em></p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Advanced Routing Policies</h2>
+            
+            <h3>Weighted Routing Policy</h3>
+            <p>Weighted routing allows controlling the percentage of requests directed to specific resources by assigning relative weights to each record.</p>
+            
+            <h4>Implementation:</h4>
+            <p>A weighted routing policy was created with three records:</p>
+            <ul>
+                <li>Record name: weighted.example.com</li>
+                <li>Record type: A record</li>
+                <li>TTL: 3 seconds (for demonstration purposes)</li>
+                <li>Three endpoints with different weights:
+                    <ul>
+                        <li>ap-southeast-1: Weight 10</li>
+                        <li>us-east-1: Weight 70</li>
+                        <li>eu-central-1: Weight 20</li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <div class="image-container">
+                <img src="Images/weighted_routing.png" alt="Weighted Routing Policy Configuration" width="600">
+                <p><em>Weighted routing policy configuration and distribution testing</em></p>
+            </div>
+            
+            <h3>Latency-based Routing Policy</h3>
+            <p>Latency-based routing directs traffic to the AWS region with the lowest latency from the requesting client, optimizing for performance.</p>
+            
+            <h4>Implementation:</h4>
+            <p>A latency-based routing policy was created with three records:</p>
+            <ul>
+                <li>Record name: latency.example.com</li>
+                <li>Record type: A record</li>
+                <li>Three endpoints in different regions:
+                    <ul>
+                        <li>ap-southeast-1</li>
+                        <li>us-east-1</li>
+                        <li>eu-central-1</li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <div class="image-container">
+                <img src="Images/latency_routing.png" alt="Latency-based Routing Policy Testing" width="600">
+                <p><em>Testing latency-based routing from different global locations</em></p>
+            </div>
+            
+            <h3>Failover Routing Policy</h3>
+            <p>Failover routing enables automatic traffic redirection to backup resources when primary resources become unavailable, providing disaster recovery capabilities.</p>
+            
+            <h4>Implementation:</h4>
+            <p>A failover routing configuration was created with:</p>
+            <ol>
+                <li>Primary record: EC2 instance in EU-Central-1
+                    <ul>
+                        <li>Associated with a health check monitoring the instance</li>
+                        <li>Set with a 60-second TTL</li>
+                    </ul>
+                </li>
+                <li>Secondary record: EC2 instance in US-East-1
+                    <ul>
+                        <li>Optional health check association</li>
+                        <li>Same TTL as primary record</li>
+                    </ul>
+                </li>
+            </ol>
+            
+            <div class="image-container">
+                <img src="Images/failover_routing.png" alt="Failover Routing Policy Testing" width="600">
+                <p><em>Demonstrating failover when primary resource becomes unhealthy</em></p>
+            </div>
+            
+            <h3>Geolocation Routing Policy</h3>
+            <p>Geolocation routing directs traffic based on the geographic location of the user, allowing for content localization and regional restrictions.</p>
+            
+            <h4>Implementation:</h4>
+            <p>A geolocation routing configuration was created with:</p>
+            <ol>
+                <li>Record for Asia: EC2 instance in AP-Southeast-1</li>
+                <li>Record for United States: EC2 instance in US-East-1</li>
+                <li>Default record: EC2 instance in EU-Central-1</li>
+            </ol>
+            
+            <div class="image-container">
+                <img src="Images/geolocation_routing.png" alt="Geolocation Routing Policy Testing" width="600">
+                <p><em>Testing geolocation routing from different countries</em></p>
+            </div>
+            
+            <h3>Multi-Value Answer Routing Policy</h3>
+            <p>Multi-Value Answer routing returns multiple IP addresses in response to DNS queries, enabling client-side load balancing while ensuring only healthy resources are included in responses.</p>
+            
+            <h4>Implementation:</h4>
+            <p>A Multi-Value Answer routing configuration was created with:</p>
+            <ol>
+                <li>Record for US-East-1 with associated health check</li>
+                <li>Record for AP-Southeast-1 with associated health check</li>
+                <li>Record for EU-Central-1 with associated health check</li>
+            </ol>
+            
+            <div class="image-container">
+                <img src="Images/multivalue_routing.png" alt="Multi-Value Answer Routing Results" width="600">
+                <p><em>Multi-Value Answer response showing only healthy resources</em></p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Technical Insights</h2>
+            
+            <h3>Understanding TTL (Time To Live)</h3>
+            <p>TTL determines how long DNS resolvers cache a DNS record before requesting a fresh copy from the authoritative DNS server. This impacts:</p>
+            <ul>
+                <li>DNS query volume: Higher TTLs reduce query volume to Route 53</li>
+                <li>Change propagation: Lower TTLs allow faster propagation of DNS changes</li>
+                <li>Cost implications: More queries (with lower TTLs) result in higher Route 53 costs</li>
+            </ul>
+            
+            <h4>Best practice when planning DNS changes:</h4>
+            <ol>
+                <li>Lower the TTL in advance (e.g., 24 hours before planned changes)</li>
+                <li>Make the record change when the lower TTL has propagated</li>
+                <li>Restore higher TTL values after the change is complete</li>
+            </ol>
+            
+            <h3>CNAME vs. Alias Records</h3>
+            <div class="comparison-container">
+                <div class="comparison-column">
+                    <h4>CNAME Records:</h4>
+                    <ul>
+                        <li>Point a hostname to any other hostname</li>
+                        <li>Cannot be used at the zone apex (root domain)</li>
+                        <li>Standard DNS feature supported by all DNS providers</li>
+                        <li>Subject to standard TTL rules</li>
+                    </ul>
+                </div>
+                
+                <div class="comparison-column">
+                    <h4>Alias Records:</h4>
+                    <ul>
+                        <li>AWS Route 53 specific feature</li>
+                        <li>Point a hostname to an AWS resource</li>
+                        <li>Can be used at the zone apex (root domain)</li>
+                        <li>Free of charge for queries</li>
+                        <li>Support native health checking</li>
+                        <li>Automatically update if the target's IP addresses change</li>
+                        <li>Cannot set custom TTL (managed by Route 53)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h4>Supported Alias Targets:</h4>
+            <ul>
+                <li>Elastic Load Balancers</li>
+                <li>CloudFront Distributions</li>
+                <li>API Gateway</li>
+                <li>Elastic Beanstalk environments</li>
+                <li>S3 Websites (not S3 buckets)</li>
+                <li>VPC Interface Endpoints</li>
+                <li>Global Accelerator</li>
+                <li>Route 53 records in the same hosted zone</li>
+            </ul>
+            
+            <p><strong>Important Note:</strong> EC2 DNS names cannot be targets for Alias records.</p>
+            
+            <h3>Route 53 Routing Policies Comparison</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Routing Policy</th>
+                        <th>Primary Purpose</th>
+                        <th>Health Checks</th>
+                        <th>Key Features</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Simple</td>
+                        <td>Basic DNS resolution</td>
+                        <td>Not supported</td>
+                        <td>Can return multiple values; client chooses randomly</td>
+                    </tr>
+                    <tr>
+                        <td>Weighted</td>
+                        <td>Traffic distribution by percentage</td>
+                        <td>Supported</td>
+                        <td>Control traffic percentage to each endpoint</td>
+                    </tr>
+                    <tr>
+                        <td>Latency</td>
+                        <td>Performance optimization</td>
+                        <td>Supported</td>
+                        <td>Routes to lowest latency region for client</td>
+                    </tr>
+                    <tr>
+                        <td>Failover</td>
+                        <td>Disaster recovery</td>
+                        <td>Required</td>
+                        <td>Automatic failover between primary and secondary</td>
+                    </tr>
+                    <tr>
+                        <td>Geolocation</td>
+                        <td>Geographic targeting</td>
+                        <td>Supported</td>
+                        <td>Routes based on user geographic location</td>
+                    </tr>
+                    <tr>
+                        <td>Multi-Value</td>
+                        <td>Client-side load balancing</td>
+                        <td>Supported</td>
+                        <td>Returns up to 8 healthy records</td>
+                    </tr>
+                    <tr>
+                        <td>Geoproximity</td>
+                        <td>Location-based with bias</td>
+                        <td>Supported</td>
+                        <td>Routes based on geographic distance with bias adjustment</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>DNS Troubleshooting</h3>
+            <p>I demonstrated proficiency with DNS troubleshooting tools:</p>
+            
+            <h4>Using dig:</h4>
+            <pre><code>dig example.com</code></pre>
+            
+            <p>The dig command provides detailed DNS information including:</p>
+            <ul>
+                <li>Query details</li>
+                <li>Answer section showing the returned records</li>
+                <li>TTL values</li>
+                <li>Authority section showing name servers</li>
+            </ul>
+            
+            <h4>Using nslookup:</h4>
+            <pre><code>nslookup example.com</code></pre>
+            
+            <div class="image-container">
+                <img src="Images/dns_troubleshooting.png" alt="DNS Troubleshooting with dig command" width="600">
+                <p><em>Output of dig command showing DNS resolution details</em></p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Health Checks in Route 53</h2>
+            
+            <h3>Types of Health Checks</h3>
+            <ol>
+                <li><strong>Endpoint Health Checks</strong>
+                    <ul>
+                        <li>Monitor specific endpoints (IP addresses or domain names)</li>
+                        <li>Check HTTP/HTTPS, TCP, or other protocols</li>
+                        <li>Customizable monitoring intervals and failure thresholds</li>
+                    </ul>
+                </li>
+                <li><strong>Calculated Health Checks</strong>
+                    <ul>
+                        <li>Combine results from multiple health checks</li>
+                        <li>Apply logical operators (AND, OR) to determine overall health status</li>
+                        <li>Provide more sophisticated health evaluation criteria</li>
+                    </ul>
+                </li>
+                <li><strong>CloudWatch Alarm Health Checks</strong>
+                    <ul>
+                        <li>Monitor the state of CloudWatch alarms</li>
+                        <li>Allow monitoring of private resources that aren't directly accessible to Route 53 health checkers</li>
+                    </ul>
+                </li>
+            </ol>
+            
+            <div class="image-container">
+                <img src="Images/health_checks.png" alt="Route 53 Health Checks Dashboard" width="600">
+                <p><em>Route 53 Health Checks dashboard showing status of multiple checks</em></p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Best Practices</h2>
+            <ol>
+                <li><strong>Implement Meaningful Health Checks:</strong> Configure health checks that accurately reflect the health of your application, not just the endpoint.</li>
+                <li><strong>Use Appropriate Routing Policies:</strong> Select routing policies based on your specific requirements (performance, geographic targeting, disaster recovery).</li>
+                <li><strong>Combine Routing Policies with Health Checks:</strong> Enhance reliability by ensuring routing decisions consider resource health.</li>
+                <li><strong>Set Appropriate TTLs:</strong> Balance between responsiveness to changes and DNS caching efficiency.</li>
+                <li><strong>Create Default/Backup Records:</strong> Always provide fallback options in case primary resources become unavailable.</li>
+                <li><strong>Monitor Health Check Status:</strong> Regularly review health check results and set up notifications for failures.</li>
+            </ol>
+        </div>
+        
+        <div class="section">
+            <h2>Conclusion</h2>
+            <p>This project demonstrates my ability to implement and manage comprehensive DNS infrastructure using AWS Route 53. The multi-region architecture with various record types and routing policies showcases my understanding of global AWS deployments and DNS concepts.</p>
+            <p>I've shown my capability to effectively implement and manage cloud infrastructure using AWS services, with a focus on Route 53 for DNS management.</p>
+            
+            <h3>Key achievements include:</h3>
+            <ul>
+                <li>Successfully configuring both traditional (CNAME) and AWS-specific (Alias) record types</li>
+                <li>Understanding the limitations and benefits of each record type</li>
+                <li>Implementing routing strategies using Route 53 routing policies</li>
+                <li>Demonstrating practical knowledge of DNS TTL behavior and its impact on caching</li>
+                <li>Building a globally distributed architecture across multiple AWS regions</li>
+            </ul>
+            
+            <p>These skills are directly applicable to real-world scenarios such as:</p>
+            <ul>
+                <li>Setting up company domains in AWS</li>
+                <li>Implementing global application deployments with optimal routing</li>
+                <li>Configuring high-availability architectures</li>
+                <li>Managing DNS changes with minimal disruption</li>
+                <li>Selecting appropriate record types based on technical requirements</li>
+            </ul>
+            
+            <a href="#" class="aws-button">View More Projects</a>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>AWS Route 53 Domain Management Portfolio &copy; 2025</p>
+        </div>
+    </footer>
+</body>
+</html>
